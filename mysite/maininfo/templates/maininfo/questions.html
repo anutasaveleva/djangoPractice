@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+</head>
+<body>
+{% if questions %}
+<ul> {% for question in questions %}
+<li> <a href="{{question.id}}/">{{question.question}}</a> </li>
+{% endfor %}
+</ul>
+{% else %}
+No questions
+{% endif %}
+</body>
+</html>

@@ -1,0 +1,40 @@
+{% extends "common/base.html" %}
+{% block content %}
+{% load staticfiles %}
+<style>
+    body {
+        font-family: "Roboto", sans-serif;
+        font-size: 18px;
+        background-color: #fdfdfd;
+        background-image:url("/static/maininfo/pic1.jpg");
+    }
+
+    .head_text {
+        color: white;
+    }
+
+    .card {
+        box-shadow: 0 16px 48px #E3E7EB;
+    }
+</style>
+
+<header class="masthead">
+    <div class="container">
+        <div class="row">
+            <div class=" col-md-8 col-md-10 mx-auto">
+                <div class="site-heading">
+                    <h3 class=" site-heading my-2 mt-3 text-white"> Добро пожаловать на мой сайт </h3>
+                    <p class="text-light">Я пытаюсь сделать что-то классное
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="container">
+    <div class="row">
+        Меня зовут Аня и я учусь на программиста и у меня почти получается.
+        Здесь отрабатываю и вспоминаю навыки и мечтаю сделать конфетку
+        </div>
+</div>
+{%endblock%}
