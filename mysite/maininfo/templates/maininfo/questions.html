@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Main</title>
-</head>
-<body>
+{% extends "common/base.html" %}
+{% block content %}
 {% if questions %}
 <ul> {% for question in questions %}
 <li> <a href="{{question.id}}/">{{question.question}}</a> </li>
@@ -13,5 +8,4 @@
 {% else %}
 No questions
 {% endif %}
-</body>
-</html>
+{% endblock %}

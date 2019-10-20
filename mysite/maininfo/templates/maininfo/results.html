@@ -1,8 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Res</title>
+{% extends "common/base.html" %}
+{% block content %}
     <h1>{{ question.question_text }}</h1>
 
 <ul>
@@ -11,9 +8,5 @@
 {% endfor %}
 </ul>
 
-<a href="{% url 'maininfo:detail' question.id %}">Vote again?</a>
-</head>
-<body>
-
-</body>
-</html>
+<a href="{% url 'detail' question.id %}">Vote again?</a>
+{% endblock %}

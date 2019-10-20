@@ -11,12 +11,15 @@ from .models import Question, Choice
 def mainPage(request):
     questions = Question.objects.all()
     context = {'questions': questions}
-    return render(request,'maininfo/main.html', context)
+    return render(request,'maininfo/main2.html', context)
 
 def questionPage(request):
     questions = Question.objects.all()
     context = {'questions': questions}
     return render(request, 'maininfo/questions.html', context)
+
+def wishPage(request):
+    return render(request, 'maininfo/wishes.html')
 
 def opinionPage(request):
     if request.method == "POST":

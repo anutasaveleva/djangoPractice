@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
         <title>SAVANNA</title>
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
@@ -7,6 +9,33 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
             crossorigin="anonymous" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Responsive HTML5 Website Landing Page for Developers">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="/static/maininfo/assets/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="/static/maininfo/assets/plugins/font-awesome/css/font-awesome.css">
+
+    <!-- github calendar css -->
+    <link rel="stylesheet" href="/static/maininfo/assets/plugins/github-calendar/dist/github-calendar.css"
+/>
+    <!-- github acitivity css -->
+    <link rel="stylesheet" href="/static/maininfo/assets/plugins/github-activity/src/github-activity.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="/mysite/maininfo/static/maininfo/assets/css/styles.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
     </head>
 
     <body>
@@ -36,20 +65,15 @@
         <!-- Navigation -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light shadow" id="mainNav">
             <div class="container-fluid">
-                <a class="navbar-brand" href="{% url 'maininfo:questions' %}">Questions</a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <a href="{% url 'maininfo:opinions' %}" class="top-menu">
-                    <span class="glyphicon glyphicon-plus">
+                <a class="navbar-brand" href="{% url 'questions' %}">Questions</a>
+                <a href="{% url 'opinions' %}" class="navbar-brand">
                         Leave your opinion
-                    </span>
                 </a>
+                <a class="navbar-brand" href="{% url 'wishes' %}">Wishlist</a>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item text-black">
-                            <a class="nav-link text-black font-weight-bold" href="#">About</a>
+                            <a class="nav-link text-black font-weight-bold" href="{% url 'main' %}">Back to main</a>
                         </li>
                         <li class="nav-item text-black">
                             <a class="nav-link text-black font-weight-bold" href="#">Policy</a>
